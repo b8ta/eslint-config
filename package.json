@@ -1,0 +1,18 @@
+{
+  "name": "eslint-config-b8ta",
+  "version": "1.0.0",
+  "description": "sharable eslint config files to extends in our projects",
+  "author": "Thanik Bhongbhibhat <thanik@b8ta.com>",
+  "main": "./eslint-config-base.yaml",
+  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "devDependencies": {
+    "babel-eslint": "^6.1.2",
+    "eslint": "^3.1.1",
+    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-react": "^5.2.2"
+  }
+}
