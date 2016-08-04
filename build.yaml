@@ -1,7 +1,7 @@
 ---
 # more strict version to catch leftover `console.log` etc.
 extends:
-  - './eslint-config-base.yaml'
+  - './base.yaml'
 rules:
   no-console:
     - 1
