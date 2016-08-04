@@ -1,0 +1,13 @@
+---
+# more strict version to catch leftover `console.log` etc.
+extends:
+  - './.eslintrc'
+rules:
+  no-console:
+    - 1
+    - allow:
+      - warn
+      - error
+  no-debugger: 1
+  func-names: 1
+  prefer-arrow-callback: 1
