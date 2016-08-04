@@ -1,0 +1,384 @@
+---
+# this is a more lax and widely-cover version
+# to use with text editor linter and development server
+# allowing `console.log` and `debugger`
+env:
+  es6: true
+  node: true
+  browser: true
+# setting globals to `false` to lint against variable
+# being overriden (read-only global variables)
+globals:
+  __DEV__: false
+  __DEBUG__: false
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: 6
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+plugins:
+  - babel
+  - react
+
+rules:
+
+  # Possible Errors
+  no-cond-assign: 2
+  no-console: 0
+  no-constant-condition: 2
+  no-control-regex: 2
+  no-debugger: 0
+  no-dupe-args: 2
+  no-dupe-keys: 2
+  no-duplicate-case: 2
+  no-empty: 2
+  no-empty-character-class: 2
+  no-ex-assign: 2
+  no-extra-boolean-cast: 2
+  # no-extra-parens: 0  # do not need this, in conflict with react/wrap-multilines
+  no-extra-semi: 1
+  no-func-assign: 2
+  no-inner-declarations:
+    - 2
+    - both
+  no-invalid-regexp: 2
+  no-irregular-whitespace: 2
+  no-negated-in-lhs: 2
+  no-obj-calls: 2
+  no-regex-spaces: 2
+  no-sparse-arrays: 2
+  no-unexpected-multiline: 2
+  no-unreachable: 2
+  no-unsafe-finally: 2
+  use-isnan: 2
+  valid-typeof: 2
+
+  # Best Practices
+  array-callback-return: 1
+  complexity:
+    - 1
+    - 12
+  consistent-return: 2
+  curly:
+    - 2
+    - all
+  default-case: 2
+  dot-location:
+    - 2
+    - property
+  dot-notation:
+    - 2
+    - allowKeywords: true
+  eqeqeq: 1
+  guard-for-in: 2
+  no-alert: 2
+  no-caller: 2
+  no-div-regex: 2
+  no-else-return: 2
+  no-empty-pattern: 2
+  no-eq-null: 2
+  no-eval: 2
+  no-extend-native: 2
+  no-extra-bind: 2
+  no-extra-label: 2
+  no-fallthrough: 2
+  no-floating-decimal: 2
+  no-implied-eval: 2
+  # no-invalid-this: 0
+  no-iterator: 2
+  no-labels: 2
+  no-lone-blocks: 2
+  no-loop-func: 2
+  # no-magic-numbers: 1
+  # no-multi-spaces:
+  #   - 1
+  #   - exceptions:
+  #       'Property': true
+  #       'VariableDeclarator': true
+  no-multi-str: 2
+  no-native-reassign: 2
+  no-new: 2
+  no-new-func: 2
+  no-new-wrappers: 2
+  no-octal: 2
+  no-octal-escape: 2
+  no-param-reassign: 1
+  no-proto: 2
+  no-redeclare: 2
+  no-return-assign: 2
+  no-script-url: 2
+  no-self-assign: 2
+  no-self-compare: 2
+  no-sequences: 2
+  no-throw-literal: 2
+  no-unmodified-loop-condition: 2
+  no-unused-expressions: 2
+  no-unused-labels: 2
+  no-useless-call: 2
+  no-useless-concat: 2
+  no-useless-escape: 2
+  # no-void: 0
+  no-warning-comments:
+    - 0
+    - terms:
+        - todo
+        - fixme
+        - xxx
+      location: start
+  no-with: 2
+  radix:
+    - 2
+    - as-needed
+  vars-on-top: 1
+  wrap-iife: 2
+  # yoda:
+  #   - 2
+  #   - never
+
+  # Variables
+  # init-declarations: 2
+  no-catch-shadow: 2
+  no-delete-var: 2
+  no-label-var: 2
+  no-shadow: 2
+  no-shadow-restricted-names: 2
+  no-undef: 2
+  no-undef-init: 2
+  # no-undefined: 0
+  no-unused-vars: 1
+  no-use-before-define: 2
+
+  # Stylistic Issues
+  # array-bracket-spacing:  # use babel/array-bracket-spacing
+  #   - 1
+  #   - never
+  block-spacing:
+    - 2
+    - always
+  brace-style:
+    - 2
+    - 1tbs
+    - allowSingleLine: false
+  # camelcase: 2  # might not work with the backend
+  comma-dangle:
+    - 2
+    - only-multiline
+  comma-spacing: 2  # default is not before but always after
+  comma-style: 2
+  computed-property-spacing:
+    - 2
+    - never
+  consistent-this: 2
+  eol-last: 2
+  # func-names: 0
+  # func-style: 0
+  indent:
+    - 2
+    - 2
+    - SwitchCase: 1
+  jsx-quotes:
+    - 2
+    - prefer-single
+  key-spacing: 1  # default is not before but always after
+  linebreak-style:
+    - 1
+    - unix
+  # lines-around-comment:
+  #   - 2
+  #   - beforeBlockComment: true
+  #     beforeLineComment: true
+  max-statements-per-line:
+    - 2
+    - max: 1
+  # new-cap: 1  # use babel/new-cap
+  new-parens: 2
+  newline-after-var: 1
+  no-array-constructor: 2
+  no-lonely-if: 2
+  no-mixed-spaces-and-tabs: 2
+  no-new-object: 2
+  no-spaced-func: 2
+  no-trailing-spaces: 2
+  # no-underscore-dangle: 2  # might not work with the backend
+  no-unneeded-ternary: 2
+  no-whitespace-before-property: 2
+  # object-curly-spacing:  # use babel/object-curly-spacing
+  #   - 1
+  #   - always
+  one-var:
+    - 2
+    - never
+  operator-assignment:
+    - 2
+    - always
+  operator-linebreak:
+    - 1
+    - after
+    -
+      overrides:
+        '?': ignore
+        ':': ignore
+  # padded-blocks: 0
+  quote-props:
+    - 1
+    - as-needed
+  quotes:
+    - 1
+    - single
+  semi:
+    - 1
+    - never
+  semi-spacing: 2
+  space-before-blocks:
+    - 2
+    - always
+  space-before-function-paren:
+    - 2
+    - never
+  space-in-parens:
+    - 2
+    - never
+  space-infix-ops: 2
+  space-unary-ops:
+    - 2
+    - words: true
+      nonwords: false
+  spaced-comment:
+    - 2
+    - always
+
+  # ES6 for consistency - reliable search in source code
+  arrow-body-style:
+    - 2
+    - as-needed
+  # arrow-parens:  # use babel/arrow-parens
+  #   - 1
+  #   - as-needed
+  arrow-spacing: 2
+  constructor-super: 2
+  generator-star-spacing:
+    - 2
+    - after  # as, function* foo() { } but not function *foo() { }
+  no-class-assign: 2
+  no-confusing-arrow: 2
+  no-const-assign: 2
+  no-dupe-class-members: 2
+  no-duplicate-imports:
+    - 2
+    - includeExports: true
+  no-new-symbol: 2
+  no-this-before-super: 1
+  no-useless-computed-key: 1
+  no-useless-constructor: 1
+  no-useless-rename: 1
+  no-var: 1  # require let or const instead of var
+  # object-shorthand: 1  # use babel/object-shorthand
+  # prefer-arrow-callback: 0
+  prefer-const: 1  # help you analyze your program flow, re-assignment
+  # prefer-reflect: 2
+  prefer-rest-params: 2
+  prefer-spread: 2
+  prefer-template: 2
+  require-yield: 2
+  rest-spread-spacing:
+    - 1
+    - never
+  template-curly-spacing: 2  # default is never
+  yield-star-spacing:
+    - 2
+    - after # as, yield* otherFunc();
+
+  babel/generator-star-spacing: 1
+  babel/new-cap: 1
+  babel/array-bracket-spacing:
+    - 1
+    - never
+  babel/object-curly-spacing:
+    - 1
+    - always
+  babel/object-shorthand: 1  # consistency, compact syntax
+  babel/arrow-parens:
+    - 1
+    - as-needed
+  babel/no-await-in-loop: 1
+  babel/flow-object-type: 1
+
+  # React specific: eslint-plugin-react
+  # react/display-name: 0  # do not need since jsx create displayName automatically
+  # react/forbid-prop-types: 0
+  react/prefer-es6-class: 1
+  react/prefer-stateless-function: 1
+  # react/prop-types: 1
+  react/react-in-jsx-scope: 2
+  # react/require-optimization: 0
+  react/require-render-return: 1
+  react/self-closing-comp: 1
+  react/sort-comp: 1
+  # react/sort-prop-types: 0
+
+  # prevent you from shooting yourself on the foot
+  # more info: https://github.com/yannickcr/eslint-plugin-react#user-content-recommended-configuration
+  react/no-danger: 2
+  # react/no-deprecated: 0  # deprecated is a lint by itself, so no need
+  react/no-did-mount-set-state: 2
+  react/no-did-update-set-state: 2
+  react/no-direct-mutation-state: 2
+  # react/no-find-dom-node: 2
+  react/no-is-mounted: 2  # isMount() is an anti-pattern and is deprecated
+  react/no-multi-comp:
+    - 1
+    - ignoreStateless: true
+  react/no-render-return-value: 1
+  # react/no-set-state: 0
+  react/no-string-refs: 1
+  react/no-unknown-property: 2
+
+  # JSX specific: eslint-plugin-react
+  react/jsx-boolean-value:
+    - 1
+    - always
+  react/jsx-closing-bracket-location: 1
+  react/jsx-curly-spacing:
+    - 1
+    - never
+  react/jsx-equals-spacing:
+    - 1
+    - never
+  react/jsx-filename-extension:  # safeguard for when we forget file extension
+    - 1
+    - extensions:
+      - .js
+      # - .jsx  # do not use .jsx extension (use .js for everything)
+  react/jsx-first-prop-new-line:
+    - 1
+    - multiline
+  react/jsx-handler-names:
+    - 1
+    - eventHandlerPrefix: 'on'
+      eventHandlerPropPrefix: 'on'
+  react/jsx-indent:
+    - 1
+    - 2  # 2 spaces for indentation
+  react/jsx-indent-props:
+    - 1
+    - 4  # 4 spaces for indentation
+  react/jsx-key: 2
+  react/jsx-max-props-per-line:
+    - 1
+    - maximum: 3
+  react/jsx-no-bind: 1
+  react/jsx-no-comment-textnodes: 1
+  react/jsx-no-duplicate-props: 2
+  # react/jsx-no-literals: 0
+  react/jsx-no-target-blank: 2
+  react/jsx-no-undef: 2
+  react/jsx-pascal-case: 1
+  # react/jsx-sort-props: 0
+  react/jsx-space-before-closing:
+    - 2
+    - always
+  react/jsx-uses-react: 2
+  react/jsx-uses-vars: 2
+  react/jsx-wrap-multilines: 1
