@@ -236,7 +236,8 @@ rules:
     - always
   space-before-function-paren:
     - 2
-    - never
+    - anonymous: always
+      named: never
   space-in-parens:
     - 2
     - never
