@@ -4,6 +4,10 @@
   "description": "sharable eslint config files to extends in our projects",
   "author": "Thanik Bhongbhibhat <thanik@b8ta.com>",
   "main": "./eslint-config-base.yaml",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b8ta/eslint-config"
+  },
   "license": "MIT",
   "keywords": [
     "eslint",
