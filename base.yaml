@@ -175,8 +175,8 @@ rules:
   # func-names: 0
   # func-style: 0
   indent:
-    - 2
-    - 2
+    - 1  # warn if violated
+    - 2  # 2 spaces
     - SwitchCase: 1
   jsx-quotes:
     - 2
