@@ -253,7 +253,7 @@ rules:
 
   # ES6 for consistency - reliable search in source code
   arrow-body-style:
-    - 2
+    - 1
     - as-needed
   # arrow-parens:  # use babel/arrow-parens
   #   - 1
