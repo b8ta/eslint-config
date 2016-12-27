@@ -379,7 +379,7 @@ rules:
   react/jsx-pascal-case: 1
   # react/jsx-sort-props: 0
   react/jsx-space-before-closing:
-    - 2
+    - 1
     - always
   react/jsx-uses-react: 2
   react/jsx-uses-vars: 2
