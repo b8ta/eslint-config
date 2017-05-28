@@ -1,0 +1,28 @@
+# TODO: add eslint-plugin-import
+# TODO: add eslint-plugin-jsx-a11y
+# TODO: lint indentation of const declare newline
+#   e.g. with tenary
+env:
+  es6: true # provide ES6 globals
+  node: true
+  browser: true
+# setting globals to `false` to detect against re-assign
+# global variables (read-only global variables)
+globals:
+  __DEV__: false
+  __DEBUG__: false
+  __TEST__: false
+extends:
+  - './rules/possible-errors.yaml'
+  - './rules/best-practices.yaml'
+  - './rules/strict-mode.yaml'
+  - './rules/variables.yaml'
+  - './rules/stylistic-issues.yaml'
+  - './rules/es6.yaml'
+  - './rules/react.yaml'
+parser: babel-eslint
+parserOptions:
+  ecmaVersion: 2017
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+  sourceType: module
