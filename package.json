@@ -13,10 +13,11 @@
     "eslint",
     "eslintconfig"
   ],
-  "peerDependencies": {
-    "eslint": "^3.18.0",
-    "eslint-plugin-import": "^2.3.0",
+  "dependencies": {
     "eslint-plugin-react": "^7.0.1"
+  },
+  "peerDependencies": {
+    "eslint": "^3.18.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3"
