@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-b8ta",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Shared ESLint config we use for React projects at b8ta.",
   "author": "Thanik Bhongbhibhat <thanik@b8ta.com>",
   "repository": {
@@ -15,6 +15,7 @@
   ],
   "peerDependencies": {
     "eslint": "^3.18.0",
+    "eslint-plugin-import": "^2.3.0",
     "eslint-plugin-react": "^7.0.1"
   },
   "devDependencies": {
