@@ -11,6 +11,12 @@ rules:
     - allowSingleLine: true
   camelcase: 0
   capitalized-comments: 0
+  # known issue: ESLint v3.19.0
+  # trailing comma for spread operator (array & object)
+  # is illegal per the language spec.
+  # https://github.com/tc39/proposal-object-rest-spread
+  # https://github.com/eslint/eslint/issues/8289
+  # https://github.com/eslint/eslint/issues/8273
   comma-dangle:
     - 1
     - arrays: 'always-multiline'
