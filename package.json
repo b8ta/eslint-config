@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-b8ta",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Shared ESLint config we use for React projects at b8ta.",
   "author": "Thanik Bhongbhibhat <thanik@b8ta.com>",
   "repository": {
