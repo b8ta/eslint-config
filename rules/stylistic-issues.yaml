@@ -90,8 +90,7 @@ rules:
       ignoreTemplateLiterals: true
   max-lines:
     - 1
-    # these options are the default
-    - max: 300
+    - max: 450
       skipBlankLines: true
       skipComments: true
   max-nested-callbacks:

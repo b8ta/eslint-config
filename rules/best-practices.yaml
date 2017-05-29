@@ -3,6 +3,8 @@ rules:
   array-callback-return: 2
   block-scoped-var: 2
   class-methods-use-this: 1
+  # use as a tool to indicate that refactoring might be needed
+  # disable at the violated function to mark as needed refactoring
   complexity:
     - 1
     - 5

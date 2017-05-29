@@ -22,9 +22,8 @@ rules:
     - allowParens: true
   no-const-assign: 2
   no-dupe-class-members: 2
-  no-duplicate-imports:
-    - 1
-    - includeExports: true
+  # replaced by import/no-duplicates
+  no-duplicate-imports: 0
   no-new-symbol: 2
   no-restricted-imports: 0
   no-this-before-super: 2
