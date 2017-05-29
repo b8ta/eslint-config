@@ -31,3 +31,5 @@ Not every project needs this, so it is the consumer project's responsibility to 
 ```
 
 ESLint will find the config file using the path relative to the location of your `package.json`. If you want more power (e.g. using different webpack config for different builds), consider [using Javascript eslint config](http://eslint.org/docs/user-guide/configuring).
+
+Do not use "babeled" webpack config file (or require modules that require to be transpiled). ESLint only loads standard Javascript that supports in the version of your runtime node.
