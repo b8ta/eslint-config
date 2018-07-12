@@ -1,0 +1,9 @@
+# client-side overrides - compose with main inside `src/.eslintrc` as:
+#   extends: ["b8ta/main.yaml", "b8ta/client.yaml"]
+rules:
+  no-console:
+    - 1
+    - allow:
+      - error
+      - info
+      - warn

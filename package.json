@@ -1,24 +1,24 @@
 {
   "name": "eslint-config-b8ta",
-  "version": "1.0.6",
-  "description": "sharable eslint config files to extends in our projects",
+  "version": "2.1.0",
+  "description": "Shared ESLint config we use for React projects at b8ta.",
   "author": "Thanik Bhongbhibhat <thanik@b8ta.com>",
-  "main": "./eslint-config-base.yaml",
   "repository": {
     "type": "git",
     "url": "https://github.com/b8ta/eslint-config"
   },
+  "main": "./main.yaml",
   "license": "MIT",
   "keywords": [
     "eslint",
     "eslintconfig"
   ],
   "dependencies": {
-    "babel-eslint": "6.1.2",
-    "eslint-plugin-babel": "3.3.0",
-    "eslint-plugin-react": "6.0.0"
+    "babel-eslint": "^7.2.3",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-react": "^7.0.1"
   },
   "peerDependencies": {
-    "eslint": "^3.2.1"
+    "eslint": "^3.18.0"
   }
 }

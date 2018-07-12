@@ -1,0 +1,77 @@
+plugins:
+  - import
+rules:
+  import/no-unresolved:
+    - 2
+    - commonjs: true
+      amd: false  # we do not use AMD
+      caseSensitive: true
+  import/named: 2
+  import/default: 2
+  import/namespace: 2
+  import/no-restricted-paths: 0
+  import/no-absolute-path: 2
+  import/no-dynamic-require: 0
+  # dependencies have to be explicitly specify in package.json
+  # not as a side-effect of using another package where they
+  # might drop the dependency at any future versions
+  import/no-internal-modules:
+    - 0  # disable for now since it also targets relative import: './module/internal'
+    - allow:
+        - "lodash/**"
+  # the syntax is non-standard, so it couples the code to Webpack
+  import/no-webpack-loader-syntax: 1
+  import/export: 1
+  # report importing default to identifier with the same name
+  # as the named export of the same module (e.g. misleading or mistake)
+  import/no-named-as-default: 1
+  # reports use of an exported name as a property on the default export.
+  import/no-named-as-default-member: 1
+  # experimental as eslint-plugin-import@2.3.0
+  import/no-deprecated: 0
+  # TODO: review this rule
+  import/no-extraneous-dependencies:
+    - 0  # disable for now
+    # # paths are treated both as absolute paths, and relative to process.cwd()
+    # - devDependencies: ["**/*.test.js", "**/webpack.config.js"]
+  import/no-mutable-exports: 2
+  # do not enabled until this proposal has at least been *presented* to TC39
+  # as eslint-plugin-import@2.3.0
+  import/unambiguous: 0
+  import/no-commonjs: 0
+  import/no-amd: 2
+  import/no-nodejs-modules: 0
+  # use import/order
+  import/first: 0
+  import/no-duplicates: 2
+  import/no-namespace: 0
+  import/extensions:
+    - 1
+    - always
+    - js: never
+      # jsx: always  # we do not use jsx extension, all files are .js
+      json: always  # explicit for someone reading this file
+  import/order:
+    - 1
+    - groups:
+      - builtin
+      - external
+      - internal
+      - parent
+      - sibling
+      - index
+      newlines-between: never
+  import/newline-after-import: 1
+  import/prefer-default-export: 0
+  # use as a tool to indicate that refactoring might be needed
+  # disable at the violated module so we know which one needs revisited
+  import/max-dependencies:
+    - 1
+    - max: 12
+  import/no-unassigned-import: 0
+  # consistency: use the decicated syntax to import default idiomatically
+  import/no-named-default: 1
+  # ensuring that default exports are named helps improve the grepability of the codebase
+  # by encouraging the re-use of the same identifier
+  # for the module's default export at its declaration site and at its import sites.
+  import/no-anonymous-default-export: 1

@@ -1,0 +1,5 @@
+rules:
+  # babel inserts `'use strict';`
+  strict:
+    - 2
+    - never
