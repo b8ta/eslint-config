@@ -157,9 +157,9 @@ rules:
   no-use-before-define: 2
 
   # Stylistic Issues
-  # array-bracket-spacing:  # use babel/array-bracket-spacing
-  #   - 1
-  #   - never
+  array-bracket-spacing:
+    - 1
+    - never
   block-spacing:
     - 2
     - always
@@ -260,14 +260,15 @@ rules:
   arrow-body-style:
     - 1
     - as-needed
-  # arrow-parens:  # use babel/arrow-parens
-  #   - 1
-  #   - as-needed
+  arrow-parens:
+    - 1
+    - as-needed
   arrow-spacing: 2
   constructor-super: 2
   generator-star-spacing:
     - 2
     - after  # as, function* foo() { } but not function *foo() { }
+  no-await-in-loop: 1
   no-class-assign: 2
   no-confusing-arrow:
     - 2
@@ -282,7 +283,7 @@ rules:
   no-useless-constructor: 1
   no-useless-rename: 1
   no-var: 1  # require let or const instead of var
-  # object-shorthand: 1  # use babel/object-shorthand
+  object-shorthand: 1
   # prefer-arrow-callback: 0
   prefer-const: 1  # help you analyze your program flow, re-assignment
   # prefer-reflect: 2
@@ -297,15 +298,6 @@ rules:
   yield-star-spacing:
     - 2
     - after # as, yield* otherFunc();
-  generator-star-spacing: 1
-  array-bracket-spacing:
-    - 1
-    - never
-  object-shorthand: 1  # consistency, compact syntax
-  arrow-parens:
-    - 1
-    - as-needed
-  no-await-in-loop: 1
 
   babel/new-cap: off
   babel/object-curly-spacing:
