@@ -382,4 +382,6 @@ rules:
   react/jsx-tag-spacing: 1
   
   flowtype/define-flow-type: 1
-  flowtype/object-type-delimiter: 1
+  flowtype/object-type-delimiter:
+    - 1
+    - semicolon
