@@ -22,6 +22,8 @@ parserOptions:
 plugins:
   - babel
   - react
+  - import
+  - flowtype
 
 rules:
 
