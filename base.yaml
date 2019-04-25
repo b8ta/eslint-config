@@ -185,7 +185,9 @@ rules:
     - 2  # 2 spaces
     - SwitchCase: 1
       ignoredNodes:
-        - 'JSXElement *' # This rule conflicts with react/jsx-indent
+        - JSXElement # This rule conflicts with react/jsx-indent
+        - JSXAttribute
+        - JSXSpreadAttribute
   jsx-quotes:
     - 2
     - prefer-single
