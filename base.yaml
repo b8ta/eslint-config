@@ -184,6 +184,8 @@ rules:
     - 1  # warn if violated
     - 2  # 2 spaces
     - SwitchCase: 1
+    - ignoredNodes:
+      - 'JSXElement *' # This rule conflicts with react/jsx-indent
   jsx-quotes:
     - 2
     - prefer-single
