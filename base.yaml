@@ -75,6 +75,7 @@ rules:
   eqeqeq: 1
   guard-for-in: 2
   no-alert: 2
+  no-await-in-loop: 1
   no-caller: 2
   no-div-regex: 2
   no-else-return: 2
@@ -155,9 +156,9 @@ rules:
   no-use-before-define: 2
 
   # Stylistic Issues
-  # array-bracket-spacing:  # use babel/array-bracket-spacing
-  #   - 1
-  #   - never
+  array-bracket-spacing:
+    - 1
+    - never
   block-spacing:
     - 2
     - always
@@ -182,6 +183,20 @@ rules:
     - 1  # warn if violated
     - 2  # 2 spaces
     - SwitchCase: 1
+      ignoredNodes:
+        - 'JSXElement'
+        - 'JSXElement > *'
+        - 'JSXAttribute'
+        - 'JSXIdentifier'
+        - 'JSXNamespacedName'
+        - 'JSXMemberExpression'
+        - 'JSXSpreadAttribute'
+        - 'JSXExpressionContainer'
+        - 'JSXOpeningElement'
+        - 'JSXClosingElement'
+        - 'JSXText'
+        - 'JSXEmptyExpression'
+        - 'JSXSpreadChild'
   jsx-quotes:
     - 2
     - prefer-single
@@ -258,9 +273,9 @@ rules:
   arrow-body-style:
     - 1
     - as-needed
-  # arrow-parens:  # use babel/arrow-parens
-  #   - 1
-  #   - as-needed
+  arrow-parens:
+    - 1
+    - as-needed
   arrow-spacing: 2
   constructor-super: 2
   generator-star-spacing:
@@ -280,7 +295,7 @@ rules:
   no-useless-constructor: 1
   no-useless-rename: 1
   no-var: 1  # require let or const instead of var
-  # object-shorthand: 1  # use babel/object-shorthand
+  object-shorthand: 1 # consistency, compact syntax
   # prefer-arrow-callback: 0
   prefer-const: 1  # help you analyze your program flow, re-assignment
   # prefer-reflect: 2
@@ -296,20 +311,10 @@ rules:
     - 2
     - after # as, yield* otherFunc();
 
-  babel/generator-star-spacing: 1
   babel/new-cap: off
-  babel/array-bracket-spacing:
-    - 1
-    - never
   babel/object-curly-spacing:
     - 1
     - always
-  babel/object-shorthand: 1  # consistency, compact syntax
-  babel/arrow-parens:
-    - 1
-    - as-needed
-  babel/no-await-in-loop: 1
-  babel/flow-object-type: 1
 
   # React specific: eslint-plugin-react
   # react/display-name: 0  # do not need since jsx create displayName automatically
@@ -387,5 +392,8 @@ rules:
   react/jsx-uses-vars: 2
   react/jsx-wrap-multilines: 1
   react/jsx-tag-spacing: 1
-  
+
   flowtype/define-flow-type: 1
+  flowtype/object-type-delimiter:
+    - 1
+    - semicolon
