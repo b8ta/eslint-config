@@ -24,6 +24,12 @@ plugins:
   - react
   - import
   - flowtype
+settings:
+  react:
+    createClass: createReactClass
+    pragma: React
+    version: detect
+    flowVersion: 0.80.0
 
 rules:
 
@@ -273,7 +279,6 @@ rules:
   generator-star-spacing:
     - 2
     - after  # as, function* foo() { } but not function *foo() { }
-  no-await-in-loop: 1
   no-class-assign: 2
   no-confusing-arrow:
     - 2
