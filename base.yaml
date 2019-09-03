@@ -22,6 +22,8 @@ parserOptions:
 plugins:
   - babel
   - react
+  - import
+  - flowtype
 
 rules:
 
@@ -184,19 +186,9 @@ rules:
     - 2  # 2 spaces
     - SwitchCase: 1
       ignoredNodes:
-        - 'JSXElement'
-        - 'JSXElement > *'
-        - 'JSXAttribute'
-        - 'JSXIdentifier'
-        - 'JSXNamespacedName'
-        - 'JSXMemberExpression'
-        - 'JSXSpreadAttribute'
-        - 'JSXExpressionContainer'
-        - 'JSXOpeningElement'
-        - 'JSXClosingElement'
-        - 'JSXText'
-        - 'JSXEmptyExpression'
-        - 'JSXSpreadChild'
+        - JSXElement # This rule conflicts with react/jsx-indent
+        - JSXAttribute
+        - JSXSpreadAttribute
   jsx-quotes:
     - 2
     - prefer-single
@@ -281,6 +273,7 @@ rules:
   generator-star-spacing:
     - 2
     - after  # as, function* foo() { } but not function *foo() { }
+  no-await-in-loop: 1
   no-class-assign: 2
   no-confusing-arrow:
     - 2
@@ -295,7 +288,7 @@ rules:
   no-useless-constructor: 1
   no-useless-rename: 1
   no-var: 1  # require let or const instead of var
-  object-shorthand: 1 # consistency, compact syntax
+  object-shorthand: 1
   # prefer-arrow-callback: 0
   prefer-const: 1  # help you analyze your program flow, re-assignment
   # prefer-reflect: 2
